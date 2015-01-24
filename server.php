@@ -5,6 +5,11 @@
  * Date: 1/24/2015
  * Time: 11:37 AM
  */
+if(!isset($_SESSION))
+{
+    session_start();
+}
+
 include_once 'db.php';
 include_once 'Lekar.php';
 include_once "Pacijent.php";
@@ -85,6 +90,26 @@ try {
 
             }
         }
+
+        if($data->type == 'unosGlavobolje') {
+            $datum=date("d-m-Y");
+            $korisnickoIme=$_SESSION['korisnickoIme'];
+            $trajanje = $data->trajanje;
+            $intenzitet = $data->intenzitet;
+            $terapija = $data->terapija;
+
+            $query="";
+            $stmt = $db->prepare($query);
+            $stmt->bindParam(":korisnickoIme", trim($userName), PDO::PARAM_STR);
+            $stmt->execute();
+            $o=$stmt->fetchAll();
+
+
+
+
+        }
+
+
 
 
 

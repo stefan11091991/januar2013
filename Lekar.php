@@ -5,14 +5,17 @@
  * Date: 1/24/2015
  * Time: 10:36 AM
  */
+include_once "Korisnik.php";
+
 
 class Lekar extends Korisnik {
 
-    private $specialization;
+    public $specialization;
 
-    public function __construct($username, $password, $firstName, $lastName, $specialization){
-        parent::construct($username, $password, $firstName, $lastName);
+    function __construct($username, $password, $name, $specialization){
+        parent::__construct($username, $password, $name);
         $this->specialization = $specialization;
     }
+
 
 }

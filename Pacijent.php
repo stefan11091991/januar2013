@@ -5,16 +5,17 @@
  * Date: 1/24/2015
  * Time: 10:30 AM
  */
+include_once "Korisnik.php";
 
 class Pacijent extends Korisnik {
 
-    private $gender;
-    private $yearOfBirth;
-    private $diagnosis;
+    public $gender;
+    public $yearOfBirth;
+    public $diagnosis;
 
-    public function __construct($username, $password, $firstName, $lastName,
+    function __construct($username, $password, $name,
     $gender, $yearOfBirth, $diagnosis){
-        parent::construct($username, $password, $firstName, $lastName);
+        parent::__construct($username, $password, $name);
         $this->gender = $gender;
         $this->yearOfBirth = $yearOfBirth;
         $this->diagnosis = $diagnosis;

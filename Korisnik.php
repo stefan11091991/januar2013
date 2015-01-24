@@ -7,15 +7,14 @@
  */
 
 abstract class Korisnik {
-private $username;
-private $password;
-private $firstName;
-private $lastName;
-    public function __construct($username, $password, $firstName, $lastName){
+public $username;
+public $password;
+public $name;
+
+    function __construct($username, $password, $name){
         $this->username = $username;
         $this->password = $password;
-        $this->firstName = $firstName;
-        $this->lastName = $lastName;
+        $this->name = $name;
     }
 
 } 

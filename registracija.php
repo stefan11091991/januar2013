@@ -29,7 +29,7 @@
 
                 })
                     .success(function(response) {
-                        alert(response.userName + " " + response.password + " " + response.type);
+                        alert(response);
 
                                                 });
             };

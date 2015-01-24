@@ -98,14 +98,11 @@ try {
             $intenzitet = $data->intenzitet;
             $terapija = $data->terapija;
 
-            $query="";
+            $query="INSERT INTO `dnevnik` (korisnicko_ime, datum, trajanje, intenzitet, terapija)
+                    VALUES (:korisnicko_ime, datum, :trajanje, :intenzitet, :terapija)";
             $stmt = $db->prepare($query);
-            $stmt->bindParam(":korisnickoIme", trim($userName), PDO::PARAM_STR);
-            $stmt->execute();
-            $o=$stmt->fetchAll();
-
-
-
+            $result->error_status = !$stmt->execute(array(':korisnicko_ime'=>$korisnickoIme, ':datum'=>$datum,
+                                    ':trajanje'=>$trajanje, ':intenzitet'=>$intenzitet, ':terapija'=>$terapija));
 
         }
 

@@ -35,7 +35,7 @@
                // alert("asdasa")
                 //alert($scope.terapija);
                 $http.post("server.php", {type : "unosGlavobolje", trajanje : $scope.duzinaGlavobolje,
-                    terapija:$scope.terapija }).success($respone)
+                    terapija:$scope.terapija }).success($response)
                     {
                         
                     }

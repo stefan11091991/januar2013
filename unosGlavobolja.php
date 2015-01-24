@@ -11,22 +11,35 @@
     <br/>
     intenzitet <input type="number" ng-model = "intenzitet">
     <br/>
-    opis problema
+    opis terapije
     <br/>
-    <textarea ng-model = "opis" rows = "15" cols="100" >
+    <textarea ng-model = "terapija" rows = "15" cols="100" >
         </textarea>
     <br/>
-    {{opis}}
+    <button  ng-click = "submit()">submit</button>
+
+    <br/>
+
 
 
 </div>
 
 <script>
-    function unosController($scope)
+    function unosController($scope, $http)
     {
         $scope.duzinaGlavobolje = 1;
         $scope.intenzitet = 5;
-        $scope.opis = "";
+        $scope.terapija = "";
+        $scope.submit = function()
+            {
+               // alert("asdasa")
+                //alert($scope.terapija);
+                $http.post("server.php", {type : "unosGlavobolje", trajanje : $scope.duzinaGlavobolje,
+                    terapija:$scope.terapija }).success($respone)
+                    {
+                        
+                    }
+            }
 
     }
 </script>

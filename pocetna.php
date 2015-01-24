@@ -16,10 +16,9 @@ session_start();
 
 if(isset($_SESSION['privilegije']) ) {
 
-    $priv = $_SESSION['privilegije'];
     var_dump($priv);
 
-    if ($priv instanceof Pacijent)
+    if (strcmp($_SESSION['privilegije'], 'pacijent') == 0)
         header('Location: unosGlavobolja.php');
     else
         header('Location: prikazStatistike.php');

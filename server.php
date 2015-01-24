@@ -68,7 +68,9 @@ try {
 
 
                     $result->korisnik = new Lekar($userName, $password, $name, $specialization);
-                    $_SESSION['privilegije'] = json_encode($result->korisnik);
+                    //$_SESSION['privilegije'] = json_encode($result->korisnik);
+                    $_SESSION['privilegije'] = "lekar";
+                    $_SESSION['userName'] = $userName;
                 }
                 else if(strcmp($mod, 'pacijent')==0){
                     $query="SELECT ime_prezime, pol, godina_rodjenja, dijagnoza
@@ -84,7 +86,9 @@ try {
 
 
                     $result->korisnik = new Pacijent($userName, $password, $name, $gender, $yearOfBirth, $diagnosis);
-                    $_SESSION['privilegije'] = json_encode($result->korisnik);
+                   // $_SESSION['privilegije'] = json_encode($result->korisnik);
+                    $_SESSION['privilegije'] = "pacijent";
+                    $_SESSION['userName'] = $userName;
 
                 }
 
@@ -95,8 +99,9 @@ try {
 
         if($data->type == 'unosGlavobolje') {
             $datum=date("d-m-Y");
-            $korisnickoIme=$_SESSION['privilegije'];
-            $korisnickoIme = $korisnickoIme->userName;
+            //$korisnickoIme=$_SESSION['privilegije'];
+            //$korisnickoIme = $korisnickoIme->userName;
+            $korisnickoIme = $_SESSION['userName'];
             echo $korisnickoIme;
             $trajanje = $data->trajanje;
             $intenzitet = $data->intenzitet;

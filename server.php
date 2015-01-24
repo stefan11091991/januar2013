@@ -14,10 +14,8 @@ try {
     $method = $_SERVER['REQUEST_METHOD'];
 
     if ($method === 'POST') {
-        //tip login
 
         $data = file_get_contents('php://input');
-//        echo $data;
         $data1 = json_decode($data);
 
         if($data1->type == 'login') {

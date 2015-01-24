@@ -22,22 +22,15 @@
         $scope.userName = "",
             $scope.password = "",
             $scope.login = function() {
-                //$scope.myVar = !$scope.myVar;
-                alert(JSON.stringify({ userName: $scope.userName, password : $scope.password, type : 'login' }));
                 $http.post("server.php", {
-//                    data: JSON.stringify({ userName: $scope.userName, password : $scope.password, type : 'login' })
                     userName: $scope.userName,
                     password : $scope.password,
                     type : 'login'
 
                 })
                     .success(function(response) {
-                        alert(response);
-//                                                      object = JSON.parse(response);
-//                                                    var korisnickoIme = object.userName;
-//                                                    var password = object.password;
-//                                                    var type = object.type;
-//                                                    alert(korisnickoIme + " " + " " + password + " " + type);
+                        alert(response.userName + " " + response.password + " " + response.type);
+
                                                 });
             };
     }

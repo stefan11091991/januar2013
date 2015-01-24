@@ -125,7 +125,39 @@ try {
 
 
     }
-}
+
+    if ($method === 'GET') {
+        if($_GET['type']==='statistika'){
+            $query="SELECT dijagnoza, count(*) from pacijenti group by dijagnoza";
+            $stmt = $db->prepare($query);
+            $stmt->execute();
+            $statistikaDijagnoza=$stmt->fetchAll();
+
+            $query="SELECT p.dijagnoza, avg(d.trajanje+0.0)
+            from dnevnik d join pacijenti p on
+            d.korisnicko_ime=p.korisnicko_ime
+            group by p.dijagnoza";
+            $stmt = $db->prepare($query);
+            $stmt->execute();
+            $statistikaTrajanja=$stmt->fetchAll();
+
+/*            $query="SELECT p.dijagnoza, avg(d.trajanje+0.0)
+            from dnevnik d join pacijenti p on
+            d.korisnicko_ime=p.korisnicko_ime
+            group by p.dijagnoza";
+            $stmt = $db->prepare($query);
+            $stmt->execute();
+            $statistikaTrajanja=$stmt->fetchAll();
+*/
+
+            $result->statistikaDijagnoza = $statistikaDijagnoza;
+            $result->statistikaDijagnoza = $statistikaTrajanja;
+
+
+        }
+    }
+
+    }
 catch(Exception $e)
 {
     $result->error_status=true;

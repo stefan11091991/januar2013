@@ -11,19 +11,34 @@ $result = new stdClass();
 try {
     $db = db::getConnectionInstance();
 
-            $userName = 'aleksandra';
-            $password = 'alex';
 
-    echo 'Novi program';
 
-            $query="SELECT * FROM `korisnici` where ";
-            $stmt = $db->prepare($query);
-            $stmt->execute();
-            $o=$stmt->fetchAll();
-            $broj=$o[0][0];
+    $query="SELECT dijagnoza, count(*) from `pacijenti` group by dijagnoza";
+    $stmt = $db->prepare($query);
+    $stmt->execute();
+    $statistikaDijagnoza=$stmt->fetchAll();
 
-            echo 'broj je ' . $broj;
+    $query="SELECT p.dijagnoza, avg(d.trajanje+0.0)
+            from dnevnik d join pacijenti p on
+            d.korisnicko_ime=p.korisnicko_ime
+            group by p.dijagnoza";
+    $stmt = $db->prepare($query);
+    $stmt->execute();
+    $statistikaTrajanja=$stmt->fetchAll();
 
+    /*            $query="SELECT p.dijagnoza, avg(d.trajanje+0.0)
+                from dnevnik d join pacijenti p on
+                d.korisnicko_ime=p.korisnicko_ime
+                group by p.dijagnoza";
+                $stmt = $db->prepare($query);
+                $stmt->execute();
+                $statistikaTrajanja=$stmt->fetchAll();
+    */
+
+    $result->statistikaDijagnoza = $statistikaDijagnoza;
+    $result->statistikaDijagnoza = $statistikaTrajanja;
+
+    echo json_encode($result);
 }
 catch(Exception $e)
 {

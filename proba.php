@@ -13,18 +13,27 @@ try {
 
 
 
-    $query="SELECT dijagnoza, count(*) from `pacijenti` group by dijagnoza";
+    $query="SELECT dijagnoza, count(*) broj from `pacijenti` group by dijagnoza";
     $stmt = $db->prepare($query);
     $stmt->execute();
-    $statistikaDijagnoza=$stmt->fetchAll();
+    $o=$stmt->fetchAll();
 
-    $query="SELECT p.dijagnoza, avg(d.trajanje+0.0)
+    foreach($o as $row) {
+        $statistikaDijagnoza[$row['dijagnoza']] = $row['broj'];
+    }
+
+    $query="SELECT p.dijagnoza, avg(d.trajanje+0.0) vreme
             from dnevnik d join pacijenti p on
             d.korisnicko_ime=p.korisnicko_ime
             group by p.dijagnoza";
     $stmt = $db->prepare($query);
     $stmt->execute();
-    $statistikaTrajanja=$stmt->fetchAll();
+    $o=$stmt->fetchAll();
+
+    foreach($o as $row) {
+        $statistikaTrajanja[$row['dijagnoza']] = $row['vreme'];
+    }
+
 
     /*            $query="SELECT p.dijagnoza, avg(d.trajanje+0.0)
                 from dnevnik d join pacijenti p on
@@ -35,8 +44,8 @@ try {
                 $statistikaTrajanja=$stmt->fetchAll();
     */
 
-    $result->statistikaDijagnoza = $statistikaDijagnoza;
-    $result->statistikaDijagnoza = $statistikaTrajanja;
+   $result->statistikaDijagnoza = $statistikaDijagnoza;
+    $result->statistikaTrajanja = $statistikaTrajanja;
 
     echo json_encode($result);
 }

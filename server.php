@@ -67,7 +67,7 @@ try {
 
 
                     $result->korisnik = new Lekar($userName, $password, $name, $specialization);
-                    echo $result->korisnik->specialization;
+                    $_SESSION['privilegije'] = $result->korisnik;
                 }
                 else if(strcmp($mod, 'pacijent')==0){
                     $query="SELECT ime_prezime, pol, godina_rodjenja, dijagnoza
@@ -83,6 +83,7 @@ try {
 
 
                     $result->korisnik = new Pacijent($userName, $password, $name, $gender, $yearOfBirth, $diagnosis);
+                    $_SESSION['privilegije'] = $result->korisnik;
 
                 }
 
@@ -102,7 +103,7 @@ try {
                     VALUES (:korisnicko_ime, datum, :trajanje, :intenzitet, :terapija)";
             $stmt = $db->prepare($query);
             $result->error_status = !$stmt->execute(array(':korisnicko_ime'=>$korisnickoIme, ':datum'=>$datum,
-                                    ':trajanje'=>$trajanje, ':intenzitet'=>$intenzitet, ':terapija'=>$terapija));
+                ':trajanje'=>$trajanje, ':intenzitet'=>$intenzitet, ':terapija'=>$terapija));
 
         }
 

@@ -35,6 +35,9 @@
                            // alert("asdas");
                            // $_SESSION['privilegije'] = response['korisnik'];
                             alert(JSON.stringify(response));
+                          //  $location.path("http://localhost:63342/jan2013/prikazStatistike.php");
+                            //$location.replace();
+                            window.location.replace("http://localhost:63342/jan2013/pocetna.php");
 
                         }
 

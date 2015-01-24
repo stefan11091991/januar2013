@@ -29,7 +29,14 @@
 
                 })
                     .success(function(response) {
-                        alert(response);
+                       // alert(response);
+                        if(response['error_status'] == false)
+                        {
+                           // alert("asdas");
+                           // $_SESSION['privilegije'] = response['korisnik'];
+                            alert(JSON.stringify(response));
+
+                        }
 
                                                 });
             };

@@ -7,8 +7,13 @@
  */
 
 session_start();
-if(isset($_SESSION['privilegije']) || true ) {
-    header('Location: unosGlavobolja.php');
+if(isset($_SESSION['privilegije']) ) {
+    $priv = $_SESSION['privilegije'];
+
+    if ($priv instanceof Pacijent)
+        header('Location: unosGlavobolja.php');
+    else
+        header('Location: prikazStatistike.php');
     exit;
 }
 include 'registracija.php';

@@ -28,9 +28,14 @@
       <file leaf-file-name="server.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.4814816" vertical-offset="58" max-vertical-offset="782">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="408" max-vertical-offset="1785">
               <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-              <folding />
+              <folding>
+                <marker date="1422122800595" expanded="true" signature="620:719" placeholder="SELECT count..." />
+                <marker date="1422122800595" expanded="true" signature="1200:1300" placeholder="SELECT `mod`..." />
+                <marker date="1422122800595" expanded="true" signature="1689:1774" placeholder="SELECT ime_p..." />
+                <marker date="1422122800595" expanded="true" signature="2339:2463" placeholder="SELECT ime_p..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -38,8 +43,18 @@
       <file leaf-file-name="registracija.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/registracija.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.053264603" vertical-offset="224" max-vertical-offset="901">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.69043154" vertical-offset="210" max-vertical-offset="901">
+              <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pocetna.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pocetna.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="340">
+              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -61,6 +76,7 @@
         <option value="$PROJECT_DIR$/Lekar.php" />
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/server.php" />
+        <option value="$PROJECT_DIR$/pocetna.php" />
         <option value="$PROJECT_DIR$/registracija.php" />
       </list>
     </option>
@@ -112,7 +128,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="jan2013" />
+              <option name="myItemId" value="januar2013" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -136,6 +152,11 @@
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
       <method />
     </configuration>
+    <configuration default="false" name="pocetna.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/jan2013/pocetna.php">
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner />
       <method />
@@ -150,10 +171,15 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <pass-parent-env-vars>false</pass-parent-env-vars>
+      <envs />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <configuration default="false" name="registracija.php" type="JavascriptDebugType" factoryName="JavaScript Debug" nameIsGenerated="true" uri="http://localhost:63342/jan2013/registracija.php">
@@ -161,17 +187,22 @@
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.registracija.php" />
       <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.server.php" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.pocetna.php" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.server.php" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.pocetna.php" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.server.php" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="1f348355-a5da-4ac6-9726-ed5ccf9434ac" name="Default" comment="" />
@@ -182,7 +213,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -196,15 +227,15 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25340393" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -228,10 +259,23 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Projekat arheologija/prethodna verzije/epigrafika21/epigrafika/server/konekcija.php">
+    <entry file="file://$PROJECT_DIR$/server.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6718213" vertical-offset="0" max-vertical-offset="582">
-          <caret line="23" column="8" selection-start-line="0" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1785">
+          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+          <folding>
+            <marker date="1422122800595" expanded="true" signature="620:719" placeholder="SELECT count..." />
+            <marker date="1422122800595" expanded="true" signature="1200:1300" placeholder="SELECT `mod`..." />
+            <marker date="1422122800595" expanded="true" signature="1689:1774" placeholder="SELECT ime_p..." />
+            <marker date="1422122800595" expanded="true" signature="2339:2463" placeholder="SELECT ime_p..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registracija.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -240,7 +284,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3119266" vertical-offset="0" max-vertical-offset="2771">
           <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -248,7 +291,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="578">
           <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -256,7 +298,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="357">
           <caret line="13" column="75" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="75" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -276,45 +317,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Programiranje za Web-Iovci/Andja vežbe/rest/client/requests_from_jquery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.0" vertical-offset="1067" max-vertical-offset="1649">
-          <caret line="75" column="13" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Projekat arheologija/prethodna verzije/epigrafika22/epigrafika/client/pocetna.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Projekat arheologija/prethodna verzije/epigrafika22/epigrafika/client/unos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="49.425926" vertical-offset="2856" max-vertical-offset="5134">
-          <caret line="11" column="60" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Projekat arheologija/prethodna verzije/epigrafika22/epigrafika/client/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47134936" vertical-offset="0" max-vertical-offset="5151">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="816">
           <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-          <folding>
-            <element signature="e#731#815#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -322,22 +328,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.0" vertical-offset="2867" max-vertical-offset="3434">
           <caret line="199" column="39" selection-start-line="199" selection-start-column="21" selection-end-line="199" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.4814816" vertical-offset="58" max-vertical-offset="782">
+        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1785">
           <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+          <folding>
+            <marker date="1422122800595" expanded="true" signature="620:719" placeholder="SELECT count..." />
+            <marker date="1422122800595" expanded="true" signature="1200:1300" placeholder="SELECT `mod`..." />
+            <marker date="1422122800595" expanded="true" signature="1689:1774" placeholder="SELECT ime_p..." />
+            <marker date="1422122800595" expanded="true" signature="2339:2463" placeholder="SELECT ime_p..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocetna.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="340">
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/registracija.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.053264603" vertical-offset="224" max-vertical-offset="901">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.69043154" vertical-offset="210" max-vertical-offset="901">
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
           <folding />
         </state>
       </provider>

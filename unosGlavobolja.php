@@ -37,7 +37,7 @@
                 $http.post("server.php", {type : "unosGlavobolje", trajanje : $scope.duzinaGlavobolje,
                     terapija:$scope.terapija }).success($response)
                     {
-                        
+
                     }
             }
 

@@ -13,6 +13,7 @@ if(!isset($_SESSION))
 include_once 'db.php';
 include_once 'Lekar.php';
 include_once "Pacijent.php";
+include_once "Korisnik.php";
 
 $result = new stdClass();
 try {
@@ -94,16 +95,22 @@ try {
 
         if($data->type == 'unosGlavobolje') {
             $datum=date("d-m-Y");
-            $korisnickoIme=$_SESSION['korisnickoIme'];
+            $korisnickoIme=$_SESSION['privilegije'];
+            echo $korisnickoIme;
             $trajanje = $data->trajanje;
             $intenzitet = $data->intenzitet;
             $terapija = $data->terapija;
 
             $query="INSERT INTO `dnevnik` (korisnicko_ime, datum, trajanje, intenzitet, terapija)
-                    VALUES (:korisnicko_ime, datum, :trajanje, :intenzitet, :terapija)";
+                    VALUES (:korisnicko_ime, :datum, :trajanje, :intenzitet, :terapija)";
             $stmt = $db->prepare($query);
-            $result->error_status = !$stmt->execute(array(':korisnicko_ime'=>$korisnickoIme, ':datum'=>$datum,
+            $returnValue = $stmt->execute(array(':korisnicko_ime'=>$korisnickoIme, ':datum'=>$datum,
                 ':trajanje'=>$trajanje, ':intenzitet'=>$intenzitet, ':terapija'=>$terapija));
+
+            if($returnValue==false)
+                $result->error_message = true;
+            else
+                $result->error_message = false;
 
         }
 
